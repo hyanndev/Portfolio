@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+/* Tokens de cor: tema claro por padrão; escuro via preferência do sistema ou [data-theme]. */
+:root {
+  --bg: #F1F3F8; --surface: #FFFFFF; --ink: #0D1431; --muted: #566080; --line: #D9DEEB;
+  --accent: #2536F5; --accent-ink: #FFFFFF; --accent-soft: #E4E7FF; --tag-ink: #2536F5;
+  --ok: #14935F; --ok-soft: #DAF3E8;
+  --code-bg: #0D1431; --code-fg: #DCE2FF; --code-key: #8FA0FF; --code-str: #6FE3B0; --code-num: #FFC978;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0A0F24; --surface: #121935; --ink: #EDF0FF; --muted: #A0A9CC; --line: #25305C;
+    --accent: #7D8BFF; --accent-ink: #0A0F24; --accent-soft: #1D2757; --tag-ink: #C6CDFF;
+    --ok: #4FD99B; --ok-soft: #133A33; --code-bg: #070B1A; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0A0F24; --surface: #121935; --ink: #EDF0FF; --muted: #A0A9CC; --line: #25305C;
+  --accent: #7D8BFF; --accent-ink: #0A0F24; --accent-soft: #1D2757; --tag-ink: #C6CDFF;
+  --ok: #4FD99B; --ok-soft: #133A33; --code-bg: #070B1A; color-scheme: dark;
+}
+
+@theme inline {
+  --font-sans: "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-tag: var(--tag-ink);
+  --color-ok: var(--ok);
+  --color-ok-soft: var(--ok-soft);
+  --color-code-bg: var(--code-bg);
+  --color-code-fg: var(--code-fg);
+  --color-code-key: var(--code-key);
+  --color-code-str: var(--code-str);
+  --color-code-num: var(--code-num);
+}
+
+/* Animações em CSS simples (mais previsíveis que as do tema). Nenhuma usa "fill-mode": se o navegador
+   não rodar a animação, o conteúdo continua visível no estado normal. */
+@keyframes pulse-ring { 70% { box-shadow: 0 0 0 8px transparent; } 100% { box-shadow: 0 0 0 0 transparent; } }
+@keyframes float {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  25% { transform: translate3d(10px, -9px, 0) rotate(.7deg); }
+  50% { transform: translate3d(0, -16px, 0) rotate(0deg); }
+  75% { transform: translate3d(-10px, -7px, 0) rotate(-.7deg); }
+}
+.animate-pulse-ring { animation: pulse-ring 2.2s infinite; }
+.animate-float { animation: float 9s ease-in-out infinite; }
+
+/* Fora de @layer de propósito: estilos sem camada vencem os das camadas, então o corpo da página
+   mantém suas cores mesmo quando o site é aberto dentro de um visualizador com CSS próprio. */
+html { scroll-behavior: smooth; background: var(--bg); }
+html body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  /* Gutter lateral de 16px que também respeita a área segura de celulares. */
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  overflow-x: hidden;
+}
+
+@layer base {
+  h1, h2, h3 { margin: 0; line-height: 1.08; letter-spacing: -0.025em; text-wrap: balance; }
+  p { margin: 0; }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+}
