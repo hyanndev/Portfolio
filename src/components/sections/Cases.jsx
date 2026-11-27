@@ -4,10 +4,11 @@ import Section, { SectionLead, SectionTitle } from '../ui/Section'
 import { TagList } from '../ui/Tag'
 import Reveal from '../ui/Reveal'
 import Gallery from '../cases/Gallery'
-import GraphDiagram from '../cases/GraphDiagram'
+import EstudaiMock from '../cases/EstudaiMock'
+import DesconfiaMock from '../cases/DesconfiaMock'
 import MeetingMock from '../cases/MeetingMock'
 
-const visuals = { pratodos: Gallery, vaox: MeetingMock, pyrosat: GraphDiagram }
+const visuals = { pratodos: Gallery, vaox: MeetingMock, estudai: EstudaiMock, desconfia: DesconfiaMock }
 
 function Case({ c }) {
   const Visual = visuals[c.id]
@@ -28,6 +29,7 @@ function Case({ c }) {
         <TagList items={c.tags} />
         <div className="mt-5 flex flex-wrap gap-2.5">
           <Button href={c.link.href} variant="primary" size="sm">{c.link.label}</Button>
+          {c.link2 && <Button href={c.link2.href} size="sm">{c.link2.label}</Button>}
         </div>
         {c.note && <p className="mt-3.5 max-w-[52ch] text-sm text-muted">{c.note}</p>}
       </Reveal>
@@ -41,7 +43,7 @@ function Case({ c }) {
 export default function Cases() {
   return (
     <Section id="cases" pad="noBottom">
-      <SectionTitle>Três projetos, de perto</SectionTitle>
+      <SectionTitle>Quatro projetos, de perto</SectionTitle>
       <div className="mb-10">
         <SectionLead>O problema, o que eu usei e como ficou.</SectionLead>
       </div>

@@ -18,7 +18,7 @@ export const apiTabs = [
       nome: 'Hyann dos Santos Espindas',
       curso: 'Eng. de Software, FIAP',
       semestre: 4,
-      foco: 'backend Java + Oracle',
+      foco: 'backend Java + IA aplicada',
       procura: 'estágio',
       cidade: 'São Paulo, SP',
     },
@@ -29,18 +29,20 @@ export const apiTabs = [
     data: {
       linguagens: ['Java', 'Python', 'SQL'],
       backend: ['Spring Boot', 'JPA', 'JWT'],
+      ia: ['RAG', 'FastAPI', 'scikit-learn'],
       banco: 'Oracle',
       front: ['React', 'Tailwind'],
-      testes: ['JUnit 5', 'Mockito'],
+      testes: ['JUnit 5', 'Mockito', 'pytest'],
     },
   },
   {
     id: 'projetos',
     label: 'GET /projetos',
     data: [
+      { nome: 'Estudaí', tipo: 'RAG', status: 'no ar' },
+      { nome: 'Desconfia', tipo: 'ML + LLM', status: 'no ar' },
       { nome: 'Pra Todos SP', ano: 2026 },
       { nome: 'VAOX', parceiro: 'TOTVS' },
-      { nome: 'PyroSat', algoritmos: 'BFS, Dijkstra' },
       { nome: 'Passa a Bola' },
       { nome: 'GreenHub' },
     ],
@@ -48,7 +50,7 @@ export const apiTabs = [
 ]
 
 export const facts = [
-  { title: '5 projetos', text: 'em equipe e individuais' },
+  { title: '6 projetos', text: 'em equipe e individuais' },
   { title: 'Java · Python · SQL', text: 'principais linguagens' },
   { title: '2025 → hoje', text: 'FIAP, 4º semestre' },
 ]

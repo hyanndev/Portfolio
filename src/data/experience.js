@@ -29,13 +29,13 @@ export const experience = [
     id: 'outros',
     when: '2025 → 2026',
     note: 'Projetos FIAP',
-    title: 'PyroSat, GreenHub e Passa a Bola',
-    org: 'Algoritmos, front-end e full stack em grupo',
+    title: 'GreenHub e Passa a Bola',
+    org: 'Front-end e full stack em grupo',
     bullets: [
-      'PyroSat: simulação de propagação de incêndios em Python com grafos, BFS, Dijkstra e fila de prioridade.',
       'GreenHub e Passa a Bola: interfaces em React com Tailwind, ligadas a APIs Node/Express.',
+      'Passa a Bola publicado na Vercel.',
       'Git e GitHub no dia a dia, com proteção de dados sensíveis por .gitignore.',
     ],
-    tags: ['Python', 'React', 'Tailwind', 'Node/Express', 'Git'],
+    tags: ['React', 'Tailwind', 'Node/Express', 'Git'],
   },
 ]

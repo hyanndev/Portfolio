@@ -11,7 +11,7 @@ export default function Contact() {
     <section id="contato" className="mb-14 rounded-[22px] bg-code-bg p-[clamp(30px,6vw,64px)] text-[#EDF0FF]">
       <h2 className="max-w-[16ch] text-[clamp(34px,5.6vw,60px)] font-extrabold text-white">Vamos conversar sobre estágio?</h2>
       <p className="mt-4 max-w-[54ch] text-[#B7C0E8]">
-        Procuro uma vaga de estágio em desenvolvimento de software, de preferência backend. Respondo rápido por e-mail ou LinkedIn.
+        Procuro uma vaga de estágio em desenvolvimento back-end ou IA aplicada. Respondo rápido por e-mail ou LinkedIn.
       </p>
       <div className="mt-[22px] select-all break-all font-mono text-[15px] font-medium text-white">{profile.email}</div>
       <div className="mt-[30px] flex flex-wrap gap-3">

@@ -31,7 +31,7 @@ src/
   components/
     layout/             Header, Footer
     sections/           Hero, Experience, Cases, Stack, MoreProjects, Education, Contact
-    cases/              visuais dos projetos (galeria, reunião, grafo)
+    cases/              visuais dos projetos (galeria, reunião, Estudaí, Desconfia)
     ui/                 peças reutilizáveis (Button, Tag, Section, BrowserFrame, JsonView)
   hooks/                useTheme, useCopy
   lib/asset.js          resolve caminhos de /public

@@ -57,7 +57,7 @@ export default function Hero() {
           <Reveal>
             <span className="inline-flex items-center gap-2 rounded-full bg-ok-soft py-1.5 pl-2.5 pr-3 text-sm font-semibold text-ok">
               <i className="size-2 animate-pulse-ring rounded-full bg-ok shadow-[0_0_0_0_var(--ok)]" />
-              Disponível para estágio em desenvolvimento de software
+              Disponível para estágio em back-end e IA aplicada
             </span>
           </Reveal>
           <Reveal delay={90}>
@@ -70,8 +70,9 @@ export default function Hero() {
           <p className="mt-[22px] max-w-[50ch] text-[clamp(17px,2vw,20px)] text-muted">
             Sou <strong className="font-semibold text-ink">{profile.name}</strong>, 21 anos, no 4º semestre de Engenharia de Software na{' '}
             <strong className="font-semibold text-ink">FIAP</strong>. Construo APIs em{' '}
-            <strong className="font-semibold text-ink">Java, Spring Boot e Oracle</strong> em projetos de equipe — com segurança, testes e documentação como
-            parte da entrega. Uso ferramentas de IA no dia a dia para aprender e programar com mais produtividade.
+            <strong className="font-semibold text-ink">Java, Spring Boot e Oracle</strong> em projetos de equipe e aplicações de{' '}
+            <strong className="font-semibold text-ink">IA com Python e RAG</strong> em projetos próprios — com segurança, testes e documentação como
+            parte da entrega.
           </p>
           </Reveal>
           <Reveal delay={290}>
